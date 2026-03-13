@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Téléchargeur YouTube MP3</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="background-blob blob-1"></div>
+    <div class="background-blob blob-2"></div>
+    
+    <main class="container">
+        <header>
+            <h1>Youtube<span class="highlight">2MP3</span></h1>
+            <p>Convertissez vos vidéos YouTube préférées en MP3 en un clic.</p>
+        </header>
+
+        <section class="download-card">
+            <form id="download-form">
+                <div class="input-group">
+                    <input type="url" id="youtube-url" value="{{ prefill_url }}" placeholder="Collez le lien YouTube ici (ex: https://youtube.com/...)" required>
+                </div>
+                <button type="submit" id="submit-btn">
+                    <span class="btn-text">Convertir en MP3</span>
+                    <span class="loader hidden"></span>
+                </button>
+            </form>
+            <div id="status-message" class="hidden"></div>
+            <div id="download-action" class="hidden">
+                <a id="download-link" href="#" class="btn-download">⬇ Télécharger le fichier MP3</a>
+            </div>
+        </section>
+
+        <section class="extension-section">
+            <h2>Gagnez du temps avec notre extension</h2>
+            <p>Ajoutez un bouton de téléchargement directement sur YouTube !</p>
+            <div class="extension-buttons">
+                <a href="/static/extension.zip" class="ext-btn" download>📥 Télécharger l'extension (Chrome / Firefox)</a>
+                <button type="button" class="ext-btn outline" onclick="showInstallGuide()">Comment l'installer ?</button>
+            </div>
+            <div id="install-guide" class="hidden">
+                <p><strong>Installation manuelle (très simple) :</strong></p>
+                <ol>
+                    <li>Téléchargez et extrayez le fichier <code>extension.zip</code> sur votre ordinateur.</li>
+                    <li>Sur Chrome, accédez aux extensions à l'adresse <code>chrome://extensions/</code></li>
+                    <li>Activez le <strong>Mode développeur</strong> (bouton en haut à droite).</li>
+                    <li>Cliquez sur <strong>Charger l'extension non empaquetée</strong> et sélectionnez le dossier extrait.</li>
+                    <li>C'est tout ! Allez sur YouTube et cliquez sur le bouton "🎵 Télécharger MP3".</li>
+                </ol>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Développé par <a href="https://www.zefcomputers.com" target="_blank" class="zef-link">ZEF Computers</a></p>
+    </footer>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>
