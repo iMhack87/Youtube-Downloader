@@ -44,7 +44,7 @@ def download():
         'no_warnings': True,
         'extractor_args': {
             'youtube': {
-                'player_client': ['android', 'web']
+                'player_client': ['tv', 'ios', 'android']
             }
         }
     }
