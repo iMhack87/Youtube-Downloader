@@ -5,7 +5,6 @@ import uuid
 import tempfile
 import time
 from threading import Thread
-from yt_dlp.networking.impersonate import ImpersonateTarget
 
 app = Flask(__name__)
 temp_dir = tempfile.gettempdir()
@@ -43,7 +42,6 @@ def download():
         }],
         'quiet': False, # Activer les logs
         'no_warnings': False,
-        'impersonate': ImpersonateTarget('chrome'),
         'noplaylist': True, # Empêche le téléchargement de playlists entières si l'URL contient un paramètre &list=
         'js_runtimes': {'node': {}},
         'remote_components': ['ejs:npm', 'ejs:github'],
