@@ -46,7 +46,7 @@ def download():
         'remote_components': ['ejs:npm', 'ejs:github'],
         'extractor_args': {
             'youtube': {
-                'player_client': ['android', 'tv', 'ios', 'web']
+                'player_client': ['ios', 'android', 'web_safari']
             }
         }
     }
