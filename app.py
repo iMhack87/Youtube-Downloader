@@ -44,9 +44,10 @@ def download():
         'no_warnings': True,
         'extractor_args': {
             'youtube': {
-                'player_client': ['tv', 'ios', 'android']
+                'player_client': ['tv', 'mweb']
             }
-        }
+        },
+        'username': 'oauth2'
     }
 
     # Prise en charge d'un fichier cookies.txt pour contourner le blocage bot YouTube
