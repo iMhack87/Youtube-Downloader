@@ -42,7 +42,16 @@ def download():
         }],
         'quiet': True,
         'no_warnings': True,
+        'extractor_args': {
+            'youtube': {
+                'player_client': ['android', 'web']
+            }
+        }
     }
+
+    # Prise en charge d'un fichier cookies.txt pour contourner le blocage bot YouTube
+    if os.path.exists('cookies.txt'):
+        ydl_opts['cookiefile'] = 'cookies.txt'
 
     try:
         with yt_dlp.YoutubeDL(ydl_opts) as ydl:
