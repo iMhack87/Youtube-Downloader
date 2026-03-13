@@ -40,8 +40,9 @@ def download():
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-        'quiet': False, # Activer les logs pour voir le lien OAuth2 dans docker logs
-        'no_warnings': False
+        'quiet': False, # Activer les logs
+        'no_warnings': False,
+        'impersonate': 'chrome'
     }
 
     # Prise en charge d'un fichier cookies.txt pour contourner le blocage bot YouTube

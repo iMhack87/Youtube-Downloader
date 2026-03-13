@@ -1,7 +1,7 @@
 FROM python:3.11-slim
 
-# Install ffmpeg for yt-dlp to extract mp3
-RUN apt-get update && apt-get install -y ffmpeg && rm -rf /var/lib/apt/lists/*
+# Install ffmpeg for yt-dlp to extract mp3, and nodejs for youtube bot protection bypass
+RUN apt-get update && apt-get install -y ffmpeg nodejs && rm -rf /var/lib/apt/lists/*
 
 WORKDIR /app
 
