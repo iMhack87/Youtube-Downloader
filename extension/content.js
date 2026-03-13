@@ -29,8 +29,8 @@ function addDownloadButton() {
 
     btn.addEventListener('click', () => {
         const videoUrl = window.location.href;
-        // Open the app exposed on port 8082 with the prefilled URL
-        const endpoint = `http://localhost:8082/?url=${encodeURIComponent(videoUrl)}`;
+        // Open the app exposed on the production server with the prefilled URL
+        const endpoint = `https://ytb.akiraa.xyz/?url=${encodeURIComponent(videoUrl)}`;
         window.open(endpoint, '_blank');
     });
 
