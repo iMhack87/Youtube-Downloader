@@ -41,13 +41,7 @@ def download():
             'preferredquality': '192',
         }],
         'quiet': False, # Activer les logs pour voir le lien OAuth2 dans docker logs
-        'no_warnings': False,
-        'extractor_args': {
-            'youtube': {
-                'player_client': ['tv', 'mweb']
-            }
-        },
-        'username': 'oauth2'
+        'no_warnings': False
     }
 
     # Prise en charge d'un fichier cookies.txt pour contourner le blocage bot YouTube
