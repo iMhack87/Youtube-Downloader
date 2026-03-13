@@ -29,8 +29,8 @@ function addDownloadButton() {
 
     btn.addEventListener('click', () => {
         const videoUrl = window.location.href;
-        // Open the app exposed on port 8081 with the prefilled URL
-        const endpoint = `http://localhost:8081/?url=${encodeURIComponent(videoUrl)}`;
+        // Open the app exposed on port 8082 with the prefilled URL
+        const endpoint = `http://localhost:8082/?url=${encodeURIComponent(videoUrl)}`;
         window.open(endpoint, '_blank');
     });
 

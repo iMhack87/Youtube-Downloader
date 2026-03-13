@@ -86,4 +86,4 @@ def serve_file(file_id):
     return "Fichier non trouvé ou expiré.", 404
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8081)
+    app.run(host='0.0.0.0', port=8082)

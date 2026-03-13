@@ -11,6 +11,6 @@ RUN pip install --no-cache-dir -U --pre yt-dlp curl-cffi
 
 COPY . .
 
-EXPOSE 8081
+EXPOSE 8082
 
 CMD ["python", "app.py"]
