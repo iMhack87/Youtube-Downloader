@@ -40,8 +40,8 @@ def download():
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
-        'quiet': True,
-        'no_warnings': True,
+        'quiet': False, # Activer les logs pour voir le lien OAuth2 dans docker logs
+        'no_warnings': False,
         'extractor_args': {
             'youtube': {
                 'player_client': ['tv', 'mweb']
