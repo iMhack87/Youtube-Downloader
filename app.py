@@ -42,11 +42,12 @@ def download():
         }],
         'quiet': False, # Activer les logs
         'no_warnings': False,
+        'noplaylist': True, # Empêche le téléchargement de playlists entières si l'URL contient un paramètre &list=
         'js_runtimes': {'node': {}},
         'remote_components': ['ejs:npm', 'ejs:github'],
         'extractor_args': {
             'youtube': {
-                'player_client': ['ios', 'android', 'web_safari']
+                'player_client': ['default']
             }
         }
     }
