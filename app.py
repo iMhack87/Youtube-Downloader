@@ -43,7 +43,12 @@ def download():
         'quiet': False, # Activer les logs
         'no_warnings': False,
         'js_runtimes': {'node': {}},
-        'remote_components': ['ejs:npm', 'ejs:github']
+        'remote_components': ['ejs:npm', 'ejs:github'],
+        'extractor_args': {
+            'youtube': {
+                'player_client': ['android', 'tv', 'ios', 'web']
+            }
+        }
     }
 
     # Prise en charge d'un fichier cookies.txt pour contourner le blocage bot YouTube
