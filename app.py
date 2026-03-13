@@ -41,8 +41,7 @@ def download():
             'preferredquality': '192',
         }],
         'quiet': False, # Activer les logs
-        'no_warnings': False,
-        'impersonate': 'chrome'
+        'no_warnings': False
     }
 
     # Prise en charge d'un fichier cookies.txt pour contourner le blocage bot YouTube
@@ -69,6 +68,7 @@ def download():
         })
 
     except Exception as e:
+        print(f"Error during download: {e}", flush=True)
         return jsonify({'error': "Erreur lors du téléchargement. Lien non supporté ou problème technique."}), 500
 
 @app.route('/api/file/<file_id>')
